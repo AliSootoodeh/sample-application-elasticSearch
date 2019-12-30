@@ -34,12 +34,12 @@ services:
         ports: # Expose Elasticsearch ports
             - "9300:9300"
             - "9200:9200"
-        networks: 
-            - elastic
+
     kib01:
         image: docker.elastic.co/kibana/kibana:7.5.1
         container_name: kib01
         ports:
             - 5601:5601
-        networks:
-            - elastic
+
+volumes: # Define seperate volume for Elasticsearch data
+    esdata:
