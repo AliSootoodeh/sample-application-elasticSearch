@@ -43,5 +43,3 @@ services:
             - 5601:5601
         networks:
             - elastic
-    volumes: # Define seperate volume for Elasticsearch data
-        esdata:
