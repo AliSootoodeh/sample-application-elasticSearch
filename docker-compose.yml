@@ -9,7 +9,7 @@ services:
             - "9229:9229" # Expose Node process debug port (disable in production)
         environment: # Set ENV vars
             - NODE_ENV=local
-            - ES_HOST=198.181.143.81
+            - ES_HOST=elasticsearch
             - PORT=3000
         volumes: # Attach local book data directory
             - ./books:/usr/src/app/books
@@ -29,7 +29,7 @@ services:
             - esdata:/usr/share/elasticsearch/data
         environment:
             - bootstrap.memory_lock=true
-            - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
             - discovery.type=single-node
         ports: # Expose Elasticsearch ports
             - "9300:9300"
