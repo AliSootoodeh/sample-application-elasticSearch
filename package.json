@@ -13,7 +13,7 @@
   "dependencies": {
     "elasticsearch": "16.5.0",
     "joi": "13.0.1",
-    "koa": "2.4.1",
+    "koa": "2.15.4",
     "koa-joi-validate": "0.5.1",
     "koa-router": "7.2.1"
   }
